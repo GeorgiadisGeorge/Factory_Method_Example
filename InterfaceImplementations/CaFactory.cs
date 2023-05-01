@@ -12,7 +12,7 @@ namespace Factory_Method_Example.InterfaceImplementations
     {
         public IVehicle CreateVehicle()
         {
-            return new Car("Toyota", "Camry", 2023);
+            return new Car("Toyota", "Supra", 1998);
         }
     }
 }
