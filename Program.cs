@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Factory_Method_Example.FactoryMethodInterafaces;
+using Factory_Method_Example.InterfaceImplementations;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,39 +12,29 @@ namespace Factory_Method_Example
     {
         static void Main(string[] args)
         {
-            // Create a Certificate document using the CertificateFactory
-            var certFactory = new CertificateFactory();
-            var certificate = certFactory.CreateDocument() as Certificate;
+            // Create a CarFactory object and use it to create a Car object.
+            IVehicleFactory carFactory = new CarFactory();
+            IVehicle car = carFactory.CreateVehicle();
 
-            // Access and print Certificate properties
-            Console.WriteLine("Certificate Details:");
-            Console.WriteLine("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
-            Console.WriteLine($"Title: {certificate.Title}");
-            Console.WriteLine($"Issuer: {certificate.Issuer}");
-            Console.WriteLine($"Date: {certificate.Subject}");
+            // Create a TruckFactory object and use it to create a Truck object.
+            IVehicleFactory truckFactory = new TruckFactory();
+            IVehicle truck = truckFactory.CreateVehicle();
 
-            Console.WriteLine("--------------------------------------");
-            Console.WriteLine("--------------------------------------");
-            Console.WriteLine("--------------------------------------");
+            // Create a MotorcycleFactory object and use it to create a Motorcycle object.
+            IVehicleFactory motorcycleFactory = new MotorcycleFactory();
+            IVehicle motorcycle = motorcycleFactory.CreateVehicle();
 
-            // Create a Candidate document using the CandidateFactory
-            var candidateFactory = new CandidateFactory();
-            var candidate = candidateFactory.CreateDocument() as Candidate;
+            // Drive each vehicle and display its properties.
+            car.Drive();
+            Console.WriteLine($"Car properties: Manufacturer={car.Manufacturer}, Model={car.Model}, Year={car.Year}");
 
-            // Access and print Candidate properties
-            Console.WriteLine("Candidate Details:");
-            Console.WriteLine("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
-            Console.WriteLine($"Title: {candidate.Title}");
-            Console.WriteLine($"Name: {candidate.Name}");
-            Console.WriteLine($"Phone: {candidate.PhoneNumber}");
+            truck.Drive();
+            Console.WriteLine($"Truck properties: Manufacturer={truck.Manufacturer}, Model={truck.Model}, Year={truck.Year}");
 
-            Console.WriteLine("--------------------------------------");
-            Console.WriteLine("--------------------------------------");
-            Console.WriteLine("--------------------------------------");
+            motorcycle.Drive();
+            Console.WriteLine($"Motorcycle properties: Manufacturer={motorcycle.Manufacturer}, Model={motorcycle.Model}, Year={motorcycle.Year}");
 
             Console.ReadLine();
-
-
         }
     }
 }
