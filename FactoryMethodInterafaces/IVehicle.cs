@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Factory_Method_Example
+namespace Factory_Method_Example.FactoryMethodInterafaces
 {
     // Define the IVehicle interface with three properties and a Drive method.
     public interface IVehicle

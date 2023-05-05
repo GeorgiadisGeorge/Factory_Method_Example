@@ -1,5 +1,5 @@
 ﻿using Factory_Method_Example.FactoryMethodInterafaces;
-using Factory_Method_Example.InterfaceImplementations;
+using Factory_Method_Example.Factories;
 using System;
 using System.Collections.Generic;
 using System.Linq;

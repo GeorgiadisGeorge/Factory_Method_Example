@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Factory_Method_Example.InterfaceImplementations
+namespace Factory_Method_Example.Factories
 {
     // Define the MotorcycleFactory class which implements the IVehicleFactory interface.
     public class MotorcycleFactory : IVehicleFactory
