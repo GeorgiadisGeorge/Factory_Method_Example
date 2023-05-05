@@ -43,16 +43,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Data\IVehicleImplementations\Car.cs" />
+    <Compile Include="Data\Models\Car.cs" />
     <Compile Include="FactoryMethodInterafaces\IVehicleFactory.cs" />
-    <Compile Include="InterfaceImplementations\CaFactory.cs" />
-    <Compile Include="InterfaceImplementations\MotorcycleFactory.cs" />
-    <Compile Include="InterfaceImplementations\TruckFactory.cs" />
-    <Compile Include="Data\IVehicle.cs" />
-    <Compile Include="Data\IVehicleImplementations\Motorcycle.cs" />
+    <Compile Include="Factories\CaFactory.cs" />
+    <Compile Include="Factories\MotorcycleFactory.cs" />
+    <Compile Include="Factories\TruckFactory.cs" />
+    <Compile Include="FactoryMethodInterafaces\IVehicle.cs" />
+    <Compile Include="Data\Models\Motorcycle.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Data\IVehicleImplementations\Truck.cs" />
+    <Compile Include="Data\Models\Truck.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
